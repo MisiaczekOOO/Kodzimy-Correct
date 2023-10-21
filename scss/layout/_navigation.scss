@@ -1,0 +1,68 @@
+.navbar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: $main-website-padding/5 $main-website-padding;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(3px);
+
+    &__name{
+        display: none;
+    }
+
+    &__logo{
+        text-transform: uppercase;
+        font-weight: 900;
+        color: $color-text-white;
+        font-size: 3.2rem;
+
+        &--special{
+            color: $color-about;
+        }
+    }
+
+    &__list{
+        display: flex;
+        gap: 2.4rem;
+        
+        &--item{
+            color: $color-text-white;
+            font-size: 1.8rem;
+            font-weight: 600;
+            &--about-us{
+                color: $color-about;
+            }
+
+            &--services{
+                color: $color-services;
+            }
+
+            &--portfolio{
+                color: $color-portfolio;
+            }
+
+            &--contact{
+                color: $color-contact;
+            }
+
+            &--hamburger{
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 640px){
+    .navbar__list{
+        &--item{
+            display: none;
+            
+            &--hamburger{
+                display: block;
+            }
+        }
+    }
+}   

@@ -1,0 +1,16 @@
+.btn{
+    color: $color-text-white;
+    border: 3px solid;
+    padding: 1.6rem 4.8rem;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    text-align: center;
+
+    &--more{
+        border-color: $color-about;
+    }
+
+    &--contact{
+        border-color: $color-contact;
+    }
+}

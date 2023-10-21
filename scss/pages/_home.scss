@@ -1,0 +1,221 @@
+//sections
+.coop-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__heading{
+        color: $color-text-white;
+        font-size: 6.4rem;
+        text-align: center;
+        line-height: 110%;
+        margin-bottom: 4.8rem;
+    }
+
+    &__card-box{
+        display: flex;
+        flex-direction: column;
+        gap: 8.2rem;
+        width: 50%;
+    }
+
+    &__card{
+
+        max-width: 50rem;
+
+        &:nth-child(1){
+            align-self: center;
+        }
+        
+        &:nth-child(2){
+            align-self: flex-start;
+        }
+        
+        &:nth-child(3){
+            align-self: flex-end;
+        }
+        
+        &:nth-child(4){
+            align-self: flex-start;
+        }
+        
+        &:nth-child(5){
+            align-self: center;
+        }
+
+        &--heading{
+            color: $color-about;
+            font-size: 2.4rem;
+            line-height: 110%;
+            margin-bottom: 1.6rem;
+        }
+
+        &--description{
+            color: $color-text-grey;
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.references-section{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &__heading{
+        color: $color-text-white;
+        font-size: 4.8rem;
+        text-align: center;
+        font-weight: 800;
+        margin-block: 3.2rem;
+        line-height: 130%;
+    }
+
+    &__card-box{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3.2rem;
+    }
+
+    &__card{
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.30);
+        border-radius: 0 1rem 1rem 0;
+        padding: 2.4rem;
+        position: relative;
+        color: $color-text-grey;
+        background-color: $background-darker;
+        max-width: 400px;
+        min-height: 15.625rem;
+        z-index: -1;
+        font-size: 1.6rem;
+
+        &--name{
+            font-size: 1.9rem;
+            color: $color-text-white;
+            font-weight: 600;
+            line-height: 100%;
+            padding-block: 1.6rem 0.2rem;
+        }
+
+        &:hover{
+            &::after{
+                height: 100%;
+            }
+        }
+
+        &::after{
+            transition: 0.6s;
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            background-color: $color-about;
+            width: 1rem;
+            height: 0%;
+
+        }
+    }
+}
+
+.more-section{
+
+    &__heading{
+        color: $color-about;
+        font-weight: 900;
+        font-size: 4.8rem;
+        text-align: center;
+        line-height: 120%;
+        margin-block: 3.2rem;
+    }
+
+    &__sticky-box{
+        position: relative;
+        &--sticky-text{
+            position: sticky;
+            top: $main-website-padding * 1.5;
+            color: $color-text-white;
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 130%;
+        }
+    }
+
+    &__content{
+        display: flex;
+        gap: 6.4rem;
+        justify-content: space-around;
+    }
+
+    &__card{
+        max-width: 100%;
+    }
+
+    &__card-box{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__card-text{
+        &--heading{
+            font-size: 2.4rem;
+            color: $color-text-white;
+            font-weight: 800;
+            line-height: 120%;
+        }
+
+        &--subtitle{
+            font-size: 1rem;
+            color: $color-about;
+            margin-bottom: 1.6rem;
+        }
+
+        &--description{
+            font-size: 1.4rem;
+            color: $color-text-grey;
+        }
+    }
+}
+
+@media only screen and (max-width: 640px){
+    .coop-section{
+        &__card-box{
+            width: 100%;
+        }
+
+        &__card{
+            max-width: 75%;
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5){
+                align-self: center;
+
+            }
+        }
+    }
+
+    .more-section{
+
+        &__sticky-box{
+            padding-inline: 4.8rem;
+            &--sticky-text{
+                writing-mode: vertical-rl;
+
+            }
+        }
+
+        &__content{
+            gap: $main-website-padding;
+        }
+        &__card-box{
+            width: 100%;
+        }
+    }
+}

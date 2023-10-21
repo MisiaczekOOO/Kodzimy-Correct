@@ -1,0 +1,45 @@
+.header{
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8.2rem;
+    
+    &__title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        &--main{
+            overflow: visible;
+            margin-bottom: 1.6rem;
+            width: 100%;
+            max-width: 100rem;
+            text-align: center;
+            display: block;
+        }
+
+        &--second{
+            color: $color-about;
+            font-size: 3.2rem;
+            line-height: 100%;
+            text-align: center;
+        }
+    }
+
+    &__cta-box{
+        display: flex;
+        gap: 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 640px){
+    .header{
+
+        &__cta-box{
+            flex-direction: column;
+        }
+
+    }
+}

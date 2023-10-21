@@ -1,0 +1,43 @@
+//global resets etc.
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+}
+
+body {
+    background-color: $background-color;
+    position: relative;
+    padding: $main-website-padding $main-website-padding 0 $main-website-padding;
+    max-width: 2560px;
+    margin: 0 auto;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 1.2rem;
+}
+
+::-webkit-scrollbar-track {
+  background: $background-color; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
