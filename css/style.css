@@ -14,7 +14,8 @@ body {
   position: relative;
   padding: 5% 5% 0 5%;
   max-width: 2560px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
 
 a {
   text-decoration: none; }
@@ -37,6 +38,23 @@ body {
   /*font-size: 16px;*/
   line-height: 1.7;
   letter-spacing: 1px; }
+
+.u-title--main {
+  height: 100%;
+  width: 100%;
+  max-width: 30rem; }
+
+.u-title--services-subtitle {
+  color: #4B896F;
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 100%; }
+
+.u-title--portfolio-subtitle {
+  color: #AA79F7;
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 100%; }
 
 .coop-section {
   display: flex;
@@ -388,7 +406,8 @@ body {
   padding: 2.5% 5%;
   position: absolute;
   width: 100%;
-  left: 0; }
+  left: 0;
+  bottom: 0; }
   .footer__name-socials--title {
     color: #fff;
     font-size: 2.4rem;
@@ -435,14 +454,3 @@ body {
     border-color: #EFA836; }
   .btn--contact {
     border-color: #9AC0E2; }
-
-.services-title--main {
-  height: 100%;
-  width: 100%;
-  max-width: 30rem; }
-
-.services-title--subtitle {
-  color: #4B896F;
-  font-size: 3.2rem;
-  font-weight: 900;
-  line-height: 100%; }
