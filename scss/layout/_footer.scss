@@ -3,10 +3,6 @@
     display: flex;
     justify-content: space-between;
     padding: $main-website-padding/2 $main-website-padding;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 0;
     &__name-socials{
         &--title{
             color: $color-text-white;

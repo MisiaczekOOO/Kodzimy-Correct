@@ -5,6 +5,7 @@
         height: 100%;
         width: 100%;
         max-width: 30rem;
+        overflow: visible;
     }
 
     &--services-subtitle{
@@ -16,6 +17,13 @@
 
     &--portfolio-subtitle{
         color: $color-portfolio;
+        font-size: 3.2rem;
+        font-weight: 900;
+        line-height: 100%;
+    }
+
+    &--contact-subtitle{
+        color: $color-contact;
         font-size: 3.2rem;
         font-weight: 900;
         line-height: 100%;

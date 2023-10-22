@@ -16,10 +16,12 @@ html {
 body {
     background-color: $background-color;
     position: relative;
-    padding: $main-website-padding $main-website-padding 0 $main-website-padding;
     max-width: 2560px;
     margin: 0 auto;
-    position: relative;
+}
+
+main{
+  padding: $main-website-padding $main-website-padding 0 $main-website-padding;
 }
 
 a{
