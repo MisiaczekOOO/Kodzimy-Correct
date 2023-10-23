@@ -1,46 +1,79 @@
-.header{
-    min-height: 70vh;
+.header {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 10vh;
+  gap: 8.2rem;
+
+  &__title {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    padding-top: 10vh;
-    gap: 8.2rem;
-    
-    &__title{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 95%;
-        &--main{
-            overflow: visible;
-            margin-bottom: 1.6rem;
-            width: 100%;
-            max-width: 100rem;
-            text-align: center;
-            display: block;
-        }
-
-        &--second{
-            color: $color-about;
-            font-size: 3.2rem;
-            line-height: 100%;
-            text-align: center;
-        }
+    align-items: center;
+    width: 95%;
+    &--main {
+      overflow: visible;
+      margin-bottom: 1.6rem;
+      width: 100%;
+      max-width: 100rem;
+      text-align: center;
+      display: block;
     }
 
-    &__cta-box{
-        display: flex;
-        gap: 1.6rem;
+    &--second {
+      color: $color-about;
+      font-size: 3.2rem;
+      line-height: 100%;
+      text-align: center;
     }
+  }
+
+  &__cta-box {
+    display: flex;
+    gap: 1.6rem;
+  }
 }
 
-@media only screen and (max-width: 640px){
-    .header{
+#p1 {
+  stroke-dasharray: 320.8900451660156;
+  animation: 2s draw-letter-k forwards;
+}
 
-        &__cta-box{
-            flex-direction: column;
-        }
+#p2 {
+  stroke-dasharray: 314.75323486328125;
+  animation: 2s draw-letter-o forwards;
+}
 
+#p3 {
+  stroke-dasharray: 326.4870910644531;
+  animation: 2s draw-letter-d forwards;
+}
+
+#p4 {
+  stroke-dasharray: 296.2052001953125;
+  animation: 2s draw-letter-z forwards;
+}
+
+#p5 {
+  stroke-dasharray: 154.55990600585938;
+  animation: 2s draw-letter-i forwards;
+}
+
+#p6 {
+  stroke-dasharray: 396.4693298339844;
+  animation: 2s draw-letter-m forwards;
+}
+
+#p7 {
+  stroke-dasharray: 241.40936279296875;
+  animation: 2s draw-letter-y forwards;
+}
+
+@media only screen and (max-width: 325px) {
+  .header {
+    &__cta-box {
+      flex-direction: column;
     }
+  }
 }

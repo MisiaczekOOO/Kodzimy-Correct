@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
   backdrop-filter: blur(3px);
-
+  z-index: 100;
   &__name {
     display: none;
   }
@@ -17,7 +17,7 @@
     text-transform: uppercase;
     font-weight: 900;
     color: $color-text-white;
-    font-size: 3.2rem;
+    font-size: 32px;
 
     &--special {
       color: $color-about;
@@ -33,27 +33,64 @@
       color: $color-text-white;
       font-size: 1.8rem;
       font-weight: 600;
+      position: relative;
+      &::after {
+        transition: all 0.7s;
+        content: "";
+        bottom: -0.8rem;
+        left: 0;
+        height: 0.3rem;
+        width: 0;
+        position: absolute;
+      }
+
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+
       &--about-us {
         color: $color-about;
+        &:hover {
+          &::after {
+            background-color: $color-about;
+          }
+        }
       }
 
       &--services {
         color: $color-services;
+        &:hover {
+          &::after {
+            background-color: $color-services;
+          }
+        }
       }
 
       &--portfolio {
         color: $color-portfolio;
+        &:hover {
+          &::after {
+            background-color: $color-portfolio;
+          }
+        }
       }
 
       &--contact {
         color: $color-contact;
+        &:hover {
+          &::after {
+            background-color: $color-contact;
+          }
+        }
       }
     }
   }
   &__hamburger {
     display: none;
     z-index: 2;
-    max-width: 3.2rem;
+    max-width: 32px;
   }
 }
 

@@ -1,16 +1,39 @@
+.portfolio-main {
+  margin-block: 15vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
 .testimonial-section {
-  display: grid;
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  justify-content: center;
 }
 
 .testimonial-card {
-  width: 300px;
-  height: 300px;
+  min-height: 32rem;
+  width: 48rem;
   position: relative;
   background-color: $background-ligher;
   border-radius: 1rem;
-  transition: all 0.2s ease-in;
   outline: 0 solid $color-portfolio;
+  background-image: url("/assets/images/placeholder.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: all 0.3s;
+
+  &__href-icon {
+    position: absolute;
+    right: 1.6rem;
+    top: 1.6rem;
+    width: 3.2rem;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+  }
 
   &__description {
     padding: 1.6rem;
@@ -19,18 +42,16 @@
     left: 0;
   }
 
-  &:hover {
-    outline: 0.3rem solid $color-portfolio;
-  }
-
   &__heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     &--heading {
-      color: $color-text-white;
+      color: $color-portfolio;
       font-size: 3.2rem;
+      transition: all 0.3s ease-out;
+      line-height: 120%;
     }
   }
 
@@ -38,5 +59,24 @@
     color: $color-text-grey;
     font-size: 1.6rem;
     line-height: 130%;
+  }
+
+  &:hover {
+    outline: 0.1rem solid $color-portfolio;
+    scale: 1.02;
+    background-size: 130%;
+    .testimonial-card {
+      &__href-icon {
+        opacity: 50%;
+        transform: rotate(45deg);
+      }
+
+      &__heading {
+        &--heading {
+          color: $color-portfolio;
+          font-size: 3.6rem;
+        }
+      }
+    }
   }
 }

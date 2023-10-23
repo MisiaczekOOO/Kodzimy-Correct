@@ -1,14 +1,8 @@
-.main {
+.contact-main {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
-}
-
-.title-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  margin-top: 15vh;
 }
 
 .content-section {
@@ -56,6 +50,7 @@
   align-self: center;
   position: relative;
   padding-left: 3.2rem;
+  margin-block: 3.2rem;
   &--heading {
     color: $color-text-white;
     font-size: 2.4rem;
@@ -128,6 +123,13 @@
     flex-direction: column;
     align-items: center;
     gap: 10rem;
+  }
+
+  .title-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .form-section {
