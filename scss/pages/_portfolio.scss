@@ -1,0 +1,42 @@
+.testimonial-section {
+  display: grid;
+  gap: 1rem;
+}
+
+.testimonial-card {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  background-color: $background-ligher;
+  border-radius: 1rem;
+  transition: all 0.2s ease-in;
+  outline: 0 solid $color-portfolio;
+
+  &__description {
+    padding: 1.6rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &:hover {
+    outline: 0.3rem solid $color-portfolio;
+  }
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--heading {
+      color: $color-text-white;
+      font-size: 3.2rem;
+    }
+  }
+
+  &__text {
+    color: $color-text-grey;
+    font-size: 1.6rem;
+    line-height: 130%;
+  }
+}
