@@ -102,6 +102,11 @@
         resize: vertical;
         font-family: 'Kanit', sans-serif;
         letter-spacing: 1px;
+        &::placeholder{
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 600;
+            font-style: italic;
+        }
     }
 
 
